@@ -1,0 +1,3 @@
+/mnt/d/projects/NLShell/build/CMakeFiles/intellishell.dir
+/mnt/d/projects/NLShell/build/CMakeFiles/edit_cache.dir
+/mnt/d/projects/NLShell/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+requests>=2.25.1
+pybind11>=2.6.0

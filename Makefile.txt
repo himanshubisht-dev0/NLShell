@@ -1,0 +1,33 @@
+CC = g++
+CFLAGS = -std=c++17 -Wall -Wextra
+LDFLAGS = -lreadline
+
+SRCDIR = src
+INCDIR = include
+OBJDIR = obj
+BINDIR = bin
+
+SOURCES = $(wildcard $(SRCDIR)/*.cpp)
+OBJECTS = $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
+TARGET = $(BINDIR)/intellishell
+
+.PHONY: all clean install
+
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	@mkdir -p $(BINDIR)
+	$(CC) $(OBJECTS) -o $@ $(LDFLAGS)
+
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
+	@mkdir -p $(OBJDIR)
+	$(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
+
+clean:
+	rm -rf $(OBJDIR) $(BINDIR)
+
+install: $(TARGET)
+	cp $(TARGET) /usr/local/bin/intellishell
+
+test:
+	python3 -m pytest tests/ -v

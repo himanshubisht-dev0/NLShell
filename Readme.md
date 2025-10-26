@@ -1,4 +1,4 @@
-intelligent-shell/
+```intelligent-shell/
 ├── src/
 │   ├── main.cpp
 │   ├── exec.cpp
@@ -20,6 +20,7 @@ intelligent-shell/
 ├── CMakeLists.txt
 ├── Makefile
 └── README.md
+```
 # Intelligent Shell (AI Command-Line Assistant)
 
 A smart shell that interprets natural language and converts it to bash commands using local Ollama models.

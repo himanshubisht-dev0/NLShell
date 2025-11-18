@@ -11,7 +11,7 @@ A smart shell that interprets natural language and converts it to bash commands 
 - Pipe and redirection support
 - Background job execution
 - History-based learning
-- 
+
 # NLShell - Natural Language Command-Line Assistant
 
 NLShell is an intelligent shell that interprets natural language and converts it to bash commands using local Ollama models. It provides an intuitive interface for users who prefer natural language over memorizing complex command syntax.
